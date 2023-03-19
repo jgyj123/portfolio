@@ -8,10 +8,9 @@ function Projects() {
         img="BetterChess.png"
         name="Better Chess"
         desc="Play chess with your friends online with video calling features"
-        inspiration="During the covid-19 pandemic, we wanted to create an application
-        that allows users to play chess online, while at the same time maintaining the
-        tangible aspects of the game such as face-face interaction."
-        tech={["ReactJS", "Firebase", "WebRTC", "ChakraUI"]}
+        inspiration="During the covid-19 pandemic, we created an online alternative
+        for chess players around the world."
+        tech={["React", "Firebase", "WebRTC", "ChakraUI"]}
         website="https://orbital-fried-liver.web.app/login"
         github="https://github.com/jgyj123/Orbital-Project"
       />
@@ -28,8 +27,8 @@ function Projects() {
         img="Super Supper.jpeg"
         name="Super Supper"
         desc="A web app that helps to streamline the process of distributing welfare in NUS halls"
-        inspiration="Supper distribution in halls usually incur a significant amount of wastage due to a mismatch in the expected turnout and actual turnout. This application helps to minimise food wastage and save money."
-        tech={["ReactJS", "Firebase", "MUI"]}
+        inspiration="Welfare distribution in hostels usually incur a significant amount of wastage. We aim to minimise that wastage."
+        tech={["React", "Firebase", "MUI"]}
         website="https://devpost.com/software/super-supper"
         github="https://github.com/jgyj123/Super-Supper"
       />
@@ -37,8 +36,8 @@ function Projects() {
         img="Study Together.jpeg"
         name="Study Together"
         desc="A tool to help you network with others with similar academic background"
-        inspiration="During the covid-19 pandemic, it was hard for students to find friends from similar academic backgrounds due to social distancing measures. This application serves as a networking tool for residents."
-        tech={["ReactJS", "Firebase", "MUI"]}
+        inspiration="This application serves as a networking tool for students staying on campus."
+        tech={["React", "Firebase", "MUI"]}
         website="https://devpost.com/software/study-together-ny5urc"
         github="https://github.com/jgyj123/Study-Together"
       />

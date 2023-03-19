@@ -20,8 +20,11 @@ function ProjectTile({ img, name, desc, inspiration, tech, website, github }) {
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <img src={img} alt="Avatar" />
-          <Typography fontSize="25px"> {name}</Typography>
-          <Typography fontSize="16px" color="rgb(101,101,101)">
+          <Typography fontSize={showText ? "25px" : "16px"}> {name}</Typography>
+          <Typography
+            fontSize={showText ? "16px" : "3vw"}
+            color="rgb(101,101,101)"
+          >
             {desc}
           </Typography>
         </div>
@@ -40,11 +43,13 @@ function ProjectTile({ img, name, desc, inspiration, tech, website, github }) {
                   marginRight: "20px;",
                 }}
               >
-                <Typography fontSize="20px">Inspiration</Typography>
+                <Typography fontSize={showText ? "20px" : "3vw"}>
+                  Inspiration
+                </Typography>
               </Box>
 
               <Typography
-                fontSize="16px"
+                fontSize={showText ? "16px" : "3vw"}
                 color="rgb(101,101,101)"
                 textAlign="left"
               >
@@ -64,7 +69,9 @@ function ProjectTile({ img, name, desc, inspiration, tech, website, github }) {
                   marginRight: "20px",
                 }}
               >
-                <Typography fontSize="20px">Tools used</Typography>
+                <Typography fontSize={showText ? "20px" : "3vw"}>
+                  Tools used
+                </Typography>
               </Box>
 
               {tech.map((skill) => {
