@@ -11,7 +11,7 @@ function App() {
   const showText = useMediaQuery("(min-width:1000px)");
   return (
     (showText && (
-      <Box sx={{ display: "flex", padding: "2vw" }}>
+      <Box sx={{ display: "flex", padding: "2vw", justifyContent: "center" }}>
         <SideBar />
         <Box>
           <Navigation />
