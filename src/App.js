@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navigation from "./Navigation";
+import Box from "@mui/material/Box";
+import SideBar from "./SideBar";
+import { flexbox } from "@chakra-ui/react";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function App() {
+  const theme = useTheme();
+  const showText = useMediaQuery("(min-width:1000px)");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    (showText && (
+      <Box sx={{ display: "flex", padding: "2vw" }}>
+        <SideBar />
+        <Box>
+          <Navigation />
+        </Box>
+      </Box>
+    )) ||
+    (!showText && !showText && (
+      <Box sx={{ padding: "2vw" }}>
+        <Box>
+          <Navigation />
+        </Box>
+      </Box>
+    ))
   );
 }
 
