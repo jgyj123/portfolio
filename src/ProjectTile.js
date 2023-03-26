@@ -90,23 +90,42 @@ function ProjectTile({ img, name, desc, inspiration, tech, website, github }) {
                 bottom: "0",
               }}
             >
-              <Button
-                variant="outlined"
+              <Link
+                href={website}
+                target="_blank"
+                underline="none"
                 sx={{
                   width: "50%",
                   borderRadius: 0,
                 }}
               >
-                <Link href={website} target="_blank" underline="none">
+                <Button
+                  variant="outlined"
+                  sx={{
+                    width: "100%",
+                    borderRadius: 0,
+                  }}
+                >
                   WEBSITE
-                </Link>
-              </Button>
+                </Button>
+              </Link>
 
-              <Button variant="outlined" sx={{ width: "50%", borderRadius: 0 }}>
-                <Link href={github} target="_blank" underline="none">
+              <Link
+                href={github}
+                target="_blank"
+                underline="none"
+                sx={{
+                  width: "50%",
+                  borderRadius: 0,
+                }}
+              >
+                <Button
+                  variant="outlined"
+                  sx={{ width: "100%", borderRadius: 0 }}
+                >
                   CODE
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </Box>
           </Box>
         </div>
