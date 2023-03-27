@@ -3,7 +3,7 @@ import ProjectTile from "./ProjectTile";
 import { Box } from "@mui/material";
 function Projects() {
   return (
-    <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+    <Box sx={{ display: "flex", flexWrap: "wrap" }}>
       <ProjectTile
         img="BetterChess.png"
         name="Better Chess"
@@ -24,6 +24,16 @@ function Projects() {
         github="https://github.com/AY2223S1-CS2103T-T08-1/tp"
       />
       <ProjectTile
+        img="sudoku.png"
+        name="Sudoku Solver"
+        desc="Try out different levels of sudoku and solve puzzles with a click of a button"
+        inspiration="Growing up, I loved playing sudoku puzzles and wanted to build a tool that can help me solve the puzzles"
+        tech={["React", "Bootstrap"]}
+        website="https://sudoku-game-theta.vercel.app/"
+        github="https://github.com/jgyj123/sudoku-game"
+      />
+
+      <ProjectTile
         img="Super Supper.jpeg"
         name="Super Supper"
         desc="A web app that helps to streamline the process of distributing welfare in NUS halls"
@@ -40,6 +50,15 @@ function Projects() {
         tech={["React", "Firebase", "MUI"]}
         website="https://devpost.com/software/study-together-ny5urc"
         github="https://github.com/jgyj123/Study-Together"
+      />
+      <ProjectTile
+        img="duke.png"
+        name="RoboText"
+        desc="A friendly Java robot that helps you keep track of your tasks"
+        inspiration="This application serves as a simple chatbot which allows users to keep track of their tasks"
+        tech={["Java", "JavaFx"]}
+        website="https://github.com/jgyj123/ip/blob/master/docs/README.md"
+        github="https://github.com/jgyj123/ip"
       />
     </Box>
   );
