@@ -15,15 +15,23 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 function ProjectTile({ img, name, desc, inspiration, tech, website, github }) {
   const theme = useTheme();
   const showText = useMediaQuery("(min-width:1000px)");
+  const width = github ? "50%" : "0%";
   return (
     <div className="flip-card">
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <img src={img} alt="Avatar" />
-          <Typography fontSize={showText ? "25px" : "16px"}> {name}</Typography>
           <Typography
-            fontSize={showText ? "16px" : "3vw"}
+            fontSize={showText ? "1.5vw" : "16px"}
+            sx={{ marginTop: "1vw" }}
+          >
+            {" "}
+            {name}
+          </Typography>
+          <Typography
+            fontSize={showText ? "1vw" : "3vw"}
             color="rgb(101,101,101)"
+            sx={{ marginBottom: "1vw" }}
           >
             {desc}
           </Typography>
@@ -43,13 +51,13 @@ function ProjectTile({ img, name, desc, inspiration, tech, website, github }) {
                   marginRight: "20px;",
                 }}
               >
-                <Typography fontSize={showText ? "20px" : "3vw"}>
+                <Typography fontSize={showText ? "1.2vw" : "3vw"}>
                   Inspiration
                 </Typography>
               </Box>
 
               <Typography
-                fontSize={showText ? "16px" : "3vw"}
+                fontSize={showText ? "1vw" : "3vw"}
                 color="rgb(101,101,101)"
                 textAlign="left"
               >
@@ -69,8 +77,13 @@ function ProjectTile({ img, name, desc, inspiration, tech, website, github }) {
                   marginRight: "20px",
                 }}
               >
-                <Typography fontSize={showText ? "20px" : "3vw"}>
-                  Tools used
+                <Typography
+                  fontSize={showText ? "1.2vw" : "3vw"}
+                  sx={{
+                    width: "5vw",
+                  }}
+                >
+                  Tools
                 </Typography>
               </Box>
 
@@ -79,35 +92,16 @@ function ProjectTile({ img, name, desc, inspiration, tech, website, github }) {
               })}
             </Box>
 
-            <Box
-              sx={{
-                marginRight: "20px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "100%",
-                position: "absolute",
-                bottom: "0",
-              }}
-            >
+            <div className="links">
               <Link
                 href={website}
                 target="_blank"
                 underline="none"
                 sx={{
-                  width: "50%",
                   borderRadius: 0,
                 }}
               >
-                <Button
-                  variant="outlined"
-                  sx={{
-                    width: "100%",
-                    borderRadius: 0,
-                  }}
-                >
-                  WEBSITE
-                </Button>
+                <button className="website-button">Website</button>
               </Link>
 
               <Link
@@ -115,18 +109,16 @@ function ProjectTile({ img, name, desc, inspiration, tech, website, github }) {
                 target="_blank"
                 underline="none"
                 sx={{
-                  width: "50%",
                   borderRadius: 0,
                 }}
               >
-                <Button
-                  variant="outlined"
-                  sx={{ width: "100%", borderRadius: 0 }}
-                >
-                  CODE
-                </Button>
+                {github ? (
+                  <button className="github-button">Code</button>
+                ) : (
+                  false
+                )}
               </Link>
-            </Box>
+            </div>
           </Box>
         </div>
       </div>

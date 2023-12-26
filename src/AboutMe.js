@@ -4,6 +4,7 @@ import { width } from "@mui/system";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { AbsoluteCenter } from "@chakra-ui/react";
+import { green } from "@mui/material/colors";
 
 function AboutMe() {
   const theme = useTheme();
@@ -14,26 +15,19 @@ function AboutMe() {
         <Box
           sx={{
             display: "flex",
+            flexDirection: "column",
+
             margin: 4,
-            width: "800px;",
-            alignItems: "center",
           }}
         >
-          <Box
-            sx={{
-              marginRight: "40px;",
-            }}
-          >
-            <Typography noWrap fontSize="20px">
-              ABOUT ME
-            </Typography>
-          </Box>
-
+          <Typography color="rgb(101,101,101)" fontSize="0.8vw;">
+            jgyj123/README.md
+          </Typography>
           <Typography color="rgb(101,101,101)">
-            Hi! Im Jonathan, a year 2 Computer Science student currently
-            studying at the National University of Singapore. I am a passionate
-            full stack developer with 2 years of experience. I look forward to
-            working with you :)
+            Hello! I'm a Year 3 Computer Science student from the National
+            University of Singapore (NUS). I am a frontend developer working at
+            the NUS Sound and Music Computing Lab. Look forward to working with
+            you! :)
           </Typography>
         </Box>
       </Paper>
@@ -51,10 +45,10 @@ function AboutMe() {
           sx={{ width: "320px", height: "320px", marginBottom: "4vh" }}
         />
         <Typography color="rgb(101,101,101)">
-          Hi! Im Jonathan, a year 2 Computer Science student currently studying
-          at the National University of Singapore. I am a passionate full stack
-          developer with 2 years of experience. I look forward to working with
-          you :)
+          Hello! I'm a Year 3 Computer Science student from the National
+          University of Singapore (NUS). I am a frontend developer working at
+          the NUS Sound and Music Computing Lab. Look forward to working with
+          you! :)
         </Typography>
 
         <Box
@@ -63,19 +57,21 @@ function AboutMe() {
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
-            marginTop: "10px;",
+            marginTop: "10vh;",
+
+            gap: 5,
           }}
         >
           <a href="https://github.com/jgyj123" target="_blank">
             <Avatar
               src="github-mark.png"
-              sx={{ width: "48px", height: "48px", marginRight: 2 }}
+              sx={{ width: "48px", height: "48px" }}
             ></Avatar>
           </a>
           <a href="https://t.me/jgyj123" target="_blank">
             <Avatar
               src="telegram-logo-944.png"
-              sx={{ width: "48px", height: "48px", marginRight: 2 }}
+              sx={{ width: "48px", height: "48px" }}
             />
           </a>
           <a href="https://www.linkedin.com/in/jonathan-goh2/" target="_blank">

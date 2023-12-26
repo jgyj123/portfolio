@@ -84,18 +84,22 @@ export default function Navigation() {
             />
           </Tabs>
         </Box>
-        <TabPanel value={value} index={0}>
-          <AboutMe />
-          <Welcome />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <Projects />
-        </TabPanel>
+        <Box>
+          <TabPanel value={value} index={0}>
+            <AboutMe />
+            <Welcome />
+          </TabPanel>
+        </Box>
+        <Box sx={{ width: "100%" }}>
+          <TabPanel value={value} index={1}>
+            <Projects />
+          </TabPanel>
+        </Box>
       </Box>
     )) ||
     (!showText && (
       <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
           <Tabs
             value={value}
             onChange={handleChange}
@@ -131,6 +135,10 @@ export default function Navigation() {
         </TabPanel>
         <TabPanel value={value} index={1}>
           <Projects />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <AboutMe />
+          <Welcome />
         </TabPanel>
       </Box>
     ))

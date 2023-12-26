@@ -18,7 +18,10 @@ function MiniTile({ content }) {
         borderRadius: "3px",
       }}
     >
-      <Typography color="rgb(101,101,101)" fontSize={showText ? "12px" : "3vw"}>
+      <Typography
+        color="rgb(101,101,101)"
+        fontSize={showText ? "0.8vw" : "3vw"}
+      >
         {content}
       </Typography>
     </Box>

@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import { BsTelegram, BsGithub } from "react-icons/bs";
 function SideBar() {
   return (
-    <Box sx={{ marginLeft: "4vw", marginRight: "2vw" }}>
+    <Box sx={{ marginLeft: "4vw", marginRight: "2vw", marginTop: "5vh;" }}>
       <Avatar src="profile.jpeg" sx={{ width: "20vw", height: "20vw" }} />
       <Typography fontSize="32px" textAlign="center;">
         Jonathan Goh

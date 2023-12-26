@@ -1,29 +1,44 @@
 import "./App.css";
 import Navigation from "./Navigation";
 import Box from "@mui/material/Box";
+
+import { Avatar, Typography, Divider } from "@mui/material";
 import SideBar from "./SideBar";
-import { flexbox } from "@chakra-ui/react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import ButtonAppBar from "./AppBar";
+import { green } from "@mui/material/colors";
 
 function App() {
   const theme = useTheme();
   const showText = useMediaQuery("(min-width:1000px)");
   return (
     (showText && (
-      <Box
-        sx={{
-          display: "flex",
-          padding: "2vw",
-          justifyContent: "center",
-          width: "100vw",
-        }}
-      >
-        <SideBar />
-        <Box>
-          <Navigation />
+      <div>
+        {/* <Box
+          sx={{
+            margin: 0,
+            padding: 0,
+            height: "6vh;",
+            backgroundColor: "#F7F8FA",
+          }}
+        ></Box>
+        <Divider sx={{}} /> */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+
+            alignSelf: "center",
+            fontFamily: "Comic Sans",
+          }}
+        >
+          <SideBar />
+          <Box>
+            <Navigation />
+          </Box>
         </Box>
-      </Box>
+      </div>
     )) ||
     (!showText && !showText && (
       <Box sx={{ padding: "2vw" }}>
